@@ -1,2 +1,14 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<h1>Mina-san, Ohaiyo!</h1>
+
+<form action="\urls" method="post">
+	Enter your lengthy-long URL here:
+	<input type ="text" name="long_url">
+	<input type ="submit" value="Enter">
+</form>
+
+<%unless @url.nil? %>
+<p> 
+	Your new short URl is : 
+	<a href="<%= @url.short_url%>"><%= @url.short_url%></a>
+</p>
+<%end%>
