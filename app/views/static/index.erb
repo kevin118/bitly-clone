@@ -1,13 +1,32 @@
-<form action="\urls" method="post">
-	<input type ="text" name="long_url" placeholder= "Insert your URL here">
-	<input type ="submit" value="Shorten!">
-</form>
+<div id="container">
+<h1 id='bar'>
+	Testing bar
+	Testing bar 2
+	Testing bar 3
+	<form action="\urls" method="post">
+		<input type ="text" name="long_url" placeholder= "Insert your URL here">
+		<input type ="submit" value="Shorten!">
+	</form>
+</h1>
+</div>
+
+<div id ="innerbody">
+		<h1 id="title" style="font-family:arial;font-size:500%; color:rgb(40,116,166);">
+		SIZE MATTERS</h1>
+
+		<%unless @url.nil? %>
+		<p> 
+		Your new short URl is : 
+		<a href="<%= @url.short_url%>"><%= @url.short_url%></a>
+		</p>
+		<%end%>
+			<p style="font-family:verdana;font-size:150%;color:rgb(127,140,141); padding:0px; ">
+				<b>Join Shorty in the mission to simplify sharing across different channels</b>
+			</p>
+		<img src="/img/sharing.jpg" >
+	</div>
 	
 
-<%unless @url.nil? %>
-<p> 
-	Your new short URl is : 
-	<a href="<%= @url.short_url%>"><%= @url.short_url%></a>
-</p>
-<%end%>
+
+
 
